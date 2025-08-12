@@ -42,7 +42,7 @@ class PostsActivity : AppCompatActivity() {
                 if (response.isSuccessful){
                     //obtain and display posts
                     val posts = response.body()!!
-                    val postsAdapter = PostsRvAdapter(posts)
+                    val postsAdapter = PostsRvAdapter(baseContext,posts)
                     rvPosts.adapter= postsAdapter
 
                 }else{
